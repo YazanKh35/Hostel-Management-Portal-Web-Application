@@ -145,7 +145,7 @@ npm run dev
 ## 👥 Contributors
 
 * **Yazan Khaled**
-* **@username**
+* **Muhammad Al Shaban**
 
 ---
 
