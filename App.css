@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://image-static.collegedunia.com/public/college_data/images/campusimage/1585807963SAG_2960.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.nav-links button {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-links button:hover {
+  background: #646363;
+  color: rgb(255, 255, 255);
+}
+
+/* Card & Form Styling */
+.card {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #2c2c2c;
+  border: 1px solid #252525;
+  color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+.status-box {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background: #28a74533;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+}
+
+/* Styling for the Warden Sub-Navigation */
+.nav-links button.active {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* Professional Admin Tables */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #252525;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table th {
+  background: #333;
+  color: #28a745;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
+  color: #eee;
+}
+
+/* Hover effect so the Warden knows rows are clickable */
+.admin-table tbody tr:hover {
+  background: #3a3a3a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Detail Button Styling */
+.detail-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.detail-btn:hover {
+  background: #0056b3;
+}
+
+/* Status Box Colors for Allocated/Free */
+.status-box.allocated { border-color: #dc3545; color: #ff4d4d; }
+.status-box.free { border-color: #28a745; color: #2ecc71; }
+
+/* تعديل العناوين الرئيسية لتصير سوداء وتظهر بوضوح فوق صورة الخلفية */
+h1, h2, h3, p {
+  color: #000000;
+}
+
+/* بما إن الكروت (cards) عندك خلفيتها سوداء (#1e1e1e)
+   لازم نرجع نخلي النصوص اللي جواتها بيضاء مشان تنقرأ
+*/
+.card h1, 
+.card h2, 
+.card h3, 
+.card p,
+.card label {
+  color: #ffffff;
+}
+
+/* تعديل لون نصوص الجدول مشان يضلوا واضحين */
+.admin-table td, 
+.admin-table th {
+  color: #eeeeee; /* رمادي فاتح جداً قريب للأبيض */
+}
