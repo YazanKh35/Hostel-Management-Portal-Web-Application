@@ -1,110 +1,123 @@
 # 🏢 Hostel Management Portal (Full Stack Web Application)
 
-A full-stack hostel management system designed to simulate real-world student accommodation workflows. The application enables students to request hostel rooms, report issues, and submit complaints, while providing administrators (wardens) with a centralized dashboard to manage and monitor all activities efficiently.
+A full-stack hostel management system built using **Flask** and **React.js** that simulates real-world hostel operations including room allocation, maintenance tracking, and complaint handling.
 
 ---
 
 ## 🚀 Features
 
-### 👨‍🎓 Student Portal
+### 👨‍🎓 Student
 
-* Submit hostel registration requests
-* Choose room preferences
-* Raise maintenance requests
-* Submit complaints with detailed descriptions
+* Register for hostel rooms
+* Select preferences
+* Submit maintenance requests
+* Raise complaints
 
-### 🛠 Warden/Admin Dashboard
+### 🛠 Warden/Admin
 
-* Approve or reject student registrations
-* Assign rooms (Block & Room Number)
-* Track hostel occupancy in real-time
-* Manage maintenance tickets
-* Handle student complaints
-* View completed (solved) requests
-
----
-
-## 🧠 System Overview
-
-The system follows a **role-based architecture**:
-
-* **Student** → Creates requests (registration, maintenance, complaints)
-* **Warden/Admin** → Reviews, processes, and manages all requests
-
-It also implements a **ticket lifecycle system**, where each request moves through states such as:
-
-* `pending`
-* `approved / rejected`
-* `active`
-* `solved`
+* Approve / Reject registrations
+* Assign rooms (Block & Room)
+* Track occupancy
+* Manage maintenance & complaints
+* View solved items
 
 ---
 
-## 🏗️ Project Structure
+## 🧠 System Highlights
 
-```
-hostel-management-system/
-│
-├── frontend/          # React (Vite)
-│   ├── src/
-│   ├── public/
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/           # Flask API
-│   └── App.py
-│
-├── README.md
-└── .gitignore
-```
+* Role-based system (Student / Warden)
+* Ticket lifecycle management
+* Centralized admin dashboard
+* Real-time updates using REST APIs
 
 ---
 
-## ⚙️ Tech Stack
+## 🏗️ Tech Stack
 
-### Frontend
+* **Frontend:** React (Vite), CSS
+* **Backend:** Flask (Python)
+* **Communication:** REST API
 
-* React.js (Vite)
-* JavaScript (ES6+)
-* CSS
+---
 
-### Backend
+## 📸 Screenshots
 
-* Flask (Python)
-* Flask-CORS
+### 🔹 Landing Page
 
-### Communication
+![Landing](./login-page.png)
 
-* REST API (HTTP Requests)
+---
+
+### 🔹 Student Registration
+
+![Registration](./room-registeration.png)
+
+---
+
+### 🔹 Complaint Portal
+
+![Complaint](./complaint-form.png)
+
+---
+
+### 🔹 Maintenance Request
+
+![Maintenance](./maintenance-request.png)
+
+---
+
+### 🔹 Warden Login
+
+![Login](./dashboard-login.png)
+
+---
+
+### 🔹 Dashboard Overview
+
+![Dashboard](./dashboard-registeration-applications.png)
+
+---
+
+### 🔹 Registration Archive
+
+![Archive](./dashboard-register-archive.png)
+
+---
+
+### 🔹 Complaints & Maintenance History
+
+![History](./dashboard-complaints\&maintenance-history.png)
+
+---
+
+### 🔹 Complaint Handling
+
+![Complaints](./dashboard-complaints.png)
+
+---
+
+### 🔹 Maintenance Management
+
+![Maintenance Dashboard](./dashboard-maintenance-requests.png)
 
 ---
 
 ## 📡 API Endpoints
 
-| Endpoint                              | Method | Description                 |
-| ------------------------------------- | ------ | --------------------------- |
-| `/register`                           | POST   | Student registration        |
-| `/registration_decision/<student_id>` | POST   | Approve/Reject registration |
-| `/maintenance`                        | POST   | Submit maintenance request  |
-| `/complaint`                          | POST   | Submit complaint            |
-| `/get_tickets`                        | GET    | Retrieve all requests       |
-| `/update_ticket/<id>`                 | POST   | Update ticket status        |
+| Endpoint                      | Method | Description          |
+| ----------------------------- | ------ | -------------------- |
+| `/register`                   | POST   | Student registration |
+| `/registration_decision/<id>` | POST   | Approve / Reject     |
+| `/maintenance`                | POST   | Maintenance request  |
+| `/complaint`                  | POST   | Complaint            |
+| `/get_tickets`                | GET    | Get all data         |
+| `/update_ticket/<id>`         | POST   | Update status        |
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run
 
-### 1️⃣ Clone Repository
-
-```
-git clone https://github.com/YOUR_USERNAME/hostel-management-system.git
-cd hostel-management-system
-```
-
----
-
-### 2️⃣ Run Backend (Flask)
+### Backend
 
 ```
 cd backend
@@ -112,74 +125,30 @@ pip install flask flask-cors
 python App.py
 ```
 
-Server will run on:
-
-```
-http://127.0.0.1:5000
-```
-
----
-
-### 3️⃣ Run Frontend (React)
+### Frontend
 
 ```
 cd frontend
 npm install
-npm start
-```
-
-Application will run on:
-
-```
-http://localhost:3000
+npm run dev
 ```
 
 ---
 
-## 🔐 Authentication
+## ⚠️ Notes
 
-* Basic password-based login for Warden (Demo purpose)
-* No advanced authentication implemented yet
-
----
-
-## ⚠️ Limitations
-
-* Uses in-memory database (data resets when server restarts)
-* No persistent storage (e.g., SQL/NoSQL)
-* Simplified authentication (not production-ready)
-
----
-
-## 🔮 Future Improvements
-
-* Integrate real database (MySQL / MongoDB)
-* Implement secure authentication (JWT)
-* Add role-based authorization
-* Deploy system (Docker / Cloud)
-* Improve UI/UX with modern design frameworks
-
----
-
-## 📸 Screenshots
-
-> Add screenshots here (Student Portal / Admin Dashboard / Tickets)
+* Uses in-memory database (data resets on restart)
+* Demo authentication (not production-ready)
 
 ---
 
 ## 👥 Contributors
 
 * **Yazan Khaled**
-* **Muhammad Al Shaban**
+* **@username**
 
 ---
 
-## 📜 License
+## ⭐ Purpose
 
-This project is for educational purposes and demonstration only.
-
----
-
-## ⭐ Acknowledgment
-
-This project was developed as a hands-on implementation to simulate enterprise-level hostel management workflows and full-stack integration.
+This project demonstrates a **full-stack system with real-world workflow simulation**, including role management, ticket processing, and admin dashboards.
